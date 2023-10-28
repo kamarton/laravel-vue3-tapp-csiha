@@ -1,0 +1,85 @@
+GET http://localhost:80/api/v1/tasks
+Accept: application/json
+
+####
+
+GET http://localhost:80/api/v1/tasks/1
+Accept: application/json
+####
+
+POST http://localhost:80/api/v1/tasks
+content-type: application/json
+Accept: application/json
+
+
+{
+    "name": "Task from api"
+}
+
+####
+POST http://localhost:80/api/v1/tasks
+content-type: application/json
+Accept: application/json
+
+
+{
+    "name": "                                "
+}
+
+####
+
+
+POST http://localhost:80/api/v1/tasks
+content-type: application/json
+Accept: application/json
+
+{
+    "name": "Task from api",
+    "description": "Task from api",
+    "time_spent": 100,
+    "time_estimated": 1000
+}
+####
+
+DELETE http://localhost:80/api/v1/tasks/1
+####
+
+PUT http://localhost:80/api/v1/tasks/1
+content-type: application/json
+Accept: application/json
+
+{
+    "name": "Task from api",
+    "description": "Task from api desc"
+}
+####
+
+PUT http://localhost:80/api/v1/tasks/1
+content-type: application/json
+Accept: application/json
+
+{
+    "name": "Task from api",
+    "description": "Task from api desc",
+    "spent_time_add": 100
+}
+####
+
+PUT http://localhost:80/api/v1/tasks/1?complete=1
+content-type: application/json
+Accept: application/json
+
+{
+}
+####
+
+PUT http://localhost:80/api/v1/tasks/1
+content-type: application/json
+Accept: application/json
+
+{
+  "name": "Task from api",
+  "description": "Task from api desc",
+  "spent_time_add": 0
+}
+####
